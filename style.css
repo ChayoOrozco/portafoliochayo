@@ -1,0 +1,312 @@
+/* General header and navigation styling */
+header {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 400;
+    font-size: 6rem;
+    color: #333;
+    letter-spacing: 2px;
+    margin: 10px 0;
+}
+
+header p {
+    font-family: "Bellota Text", sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+/* Show Desktop Menu on Larger Screens */
+.desktop-nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.desktop-nav a {
+    font-family: "Bellota Text", sans-serif;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+}
+
+.desktop-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hide mobile dropdown toggle and links on larger screens */
+.current-page, .dropdown-links {
+    display: none;
+}
+
+/* Mobile and Tablet Styles */
+@media (max-width: 768px) {
+    /* Hide the desktop nav on smaller screens */
+    .desktop-nav {
+        display: none;
+    }
+
+    /* Show the current page with dropdown arrow on mobile/tablet */
+    .current-page {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-family: "Bellota Text", sans-serif;
+        font-weight: 700;
+        font-size: 1.3rem;
+        color: #f7e4a6; /* Keep the current page color */
+        margin-top: 10px;
+    }
+
+    .current-page .dropdown-arrow {
+        margin-left: 5px;
+        color: #f7e4a6;
+    }
+
+    /* Dropdown links for mobile view */
+    .dropdown-links {
+        display: none; /* Hidden initially */
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    /* Show dropdown links when menu is toggled */
+    .show-menu {
+        display: flex; /* Display links in vertical format */
+    }
+
+    .dropdown-links a {
+        font-family: "Bellota Text", sans-serif;
+        font-weight: 700;
+        color: #333;
+        text-decoration: none;
+    }
+
+    .dropdown-links a:hover {
+        color: #0073e6;
+        text-decoration: underline;
+    }
+}
+
+/* Custom Cursor Styling */
+.custom-cursor {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    background-color: #333;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease;
+    z-index: 9999;
+}
+
+/* Change cursor to a vertical line when hovering over links */
+.menu-hover {
+    width: 3px; /* Thickness of the vertical line */
+    height: 30px; /* Length of the vertical line */
+    border-radius: 0; /* Remove rounding to make it a line */
+    background-color: #555; /* Adjust color if needed */
+    transform: translateY(-2px); /* Adjust positioning */
+}
+/* Hide the default cursor */
+/* Hide the default cursor */
+body {
+    cursor: none;
+}
+
+/* Hide the hand cursor on links */
+a {
+    cursor: none;
+}
+
+/* General styling for the about section */
+.about-section {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start; /* Alinea los elementos al inicio */
+    justify-content: center;
+}
+
+/* About text styles */
+
+.about-text {
+    flex: 1;
+    font-family: "Bellota Text", sans-serif;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.about-text a {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-text a:hover {
+    text-decoration: underline;
+}
+
+/* Profile image styles */
+.profile-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Responsive design for tablet and mobile sizes */
+@media (max-width: 768px) {
+    /* Stack image and text vertically on smaller screens */
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image {
+        max-width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+}
+/* Initial state: fully transparent */
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* When the page loads, fade in to full opacity */
+body.fade-in {
+    opacity: 1;
+}
+
+/* When navigating away, fade out */
+body.fade-out {
+    opacity: 0;
+}
+
+
+/* Skills Section */
+.skills-section {
+    margin-top: 40px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.skills-section h3 {
+    font-size: 2rem;
+    font-family: "Poiret One", sans-serif; /* Match main heading font */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill-block {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: "Bellota Text", sans-serif;
+}
+
+.skill-block strong {
+    font-size: 1.2rem;
+    color: #333;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.skill-logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px;
+}
+
+.skill-logos img {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Responsive Design for Tablet and Mobile */
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-block {
+        width: 80%;
+        max-width: 300px;
+    }
+    
+    .skill-logos {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller screens */
+    }
+}
+
+.skill-logos img {
+    width: 50px; /* Desktop size */
+    height: 50px;
+}
+
+@media (max-width: 768px) {
+    .skill-logos img {
+        width: 40px; /* Tablet and mobile size */
+        height: 40px;
+    }
+}
+
+/* Align text and image at the top */
+.about-section {
+    display: flex;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start; /* This aligns the items at the top */
+}
+
+

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosario Orozco | Portfolio</title>
+    
+    <!-- Google Fonts Preconnect and Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poiret+One&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            cursor: none; /* Hide the default cursor */
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: "Poiret One", sans-serif;
+            font-weight: 400;
+            font-size: 6rem;
+            color: #333;
+            letter-spacing: 2px;
+            margin: 20px 0;
+        }
+
+        header p {
+            font-family: "Bellota Text", sans-serif;
+            font-weight: 400;
+            font-size: 1.8rem;
+            color: gray;
+            margin-bottom: 30px;
+        }
+
+        /* Nav Links with Bold Bellota Text */
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        header nav a {
+            font-family: "Bellota Text", sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.3rem;
+            cursor: none; /* Hide the default hand pointer */
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design for Tablet and Mobile */
+        @media (max-width: 768px) {
+            header nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            header h1 {
+                font-size: 4rem;
+            }
+
+            header p {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Custom Cursor Styling */
+        .custom-cursor {
+            position: fixed;
+            width: 15px;
+            height: 15px;
+            background-color: #333;
+            border-radius: 50%;
+            pointer-events: none;
+            transition: transform 0.15s ease, width 0.15s ease, height 0.15s ease;
+            z-index: 9999;
+        }
+
+        /* Change cursor to a vertical line when hovering over links */
+        .menu-hover {
+            width: 3px; /* Thickness of the vertical line */
+            height: 30px; /* Length of the vertical line */
+            border-radius: 0; /* Remove rounding to make it a line */
+            background-color: #555; /* Change color if needed */
+            transform: translateY(-2px); /* Adjust positioning if necessary */
+        }
+    </style>
+
+    
+</head>
+<body>
+    
+
+    <!-- Header Section -->
+    <header>
+        <h1 class="poiret-one-regular">Rosario Orozco</h1>
+        <p class="bellota-text-regular">Code. Data. Solutions.</p>
+
+        <nav>
+            <a href="about.html">About</a> <!-- Link to About page -->
+            <a href="#writing">Projects</a>
+            <a href="#projects">Baking with Chayo</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        
+
+        
+    </header>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- JavaScript for Custom Cursor -->
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+
+        // Update cursor position on mouse move
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.top = `${e.clientY}px`;
+            cursor.style.left = `${e.clientX}px`;
+        });
+
+        // Add the line effect when hovering over menu links
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                cursor.classList.add('menu-hover');
+            });
+            link.addEventListener('mouseleave', () => {
+                cursor.classList.remove('menu-hover');
+            });
+        });
+    // Apply fade-out effect on link clicks
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Only apply the effect to internal links (not external)
+            if (href && !href.startsWith('http')) {
+                e.preventDefault();
+                document.body.classList.add('fade-out');
+                
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500); // Duration should match the CSS transition time
+            }
+        });
+    });
+    </script>
+<script src="js/transitions.js"></script>
+
+</body>
+</html>

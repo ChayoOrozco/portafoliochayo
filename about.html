@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Rosario Orozco</title>
+    
+    <!-- Link to your main CSS for shared styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poiret+One&display=swap" rel="stylesheet">
+    
+</head>
+<body data-page="about" class="about-page">
+    
+    <!-- Header Section -->
+    <header>
+        <h1>Rosario Orozco</h1>
+        <p>Code. Data. Solutions.</p>
+
+        <!-- Dropdown toggle for mobile and tablet view only -->
+        <div class="current-page" onclick="toggleMenu()">
+            <span>About</span> <span class="dropdown-arrow">▼</span>
+        </div>
+    
+        <!-- Dropdown Links (initially hidden) -->
+        <nav id="menu" class="dropdown-links">
+            <a href="index.html">Home</a>
+            <a href="#writing">Projects</a>
+            <a href="#projects">Baking with Chayo</a>
+            <a href="#contact">Let's work together</a>
+        </nav>
+
+        <!-- Desktop Menu for larger screens only -->
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="#writing">Projects</a>
+            <a href="#projects">Baking with Chayo</a>
+            <a href="#contact">Let's work together</a>
+        </nav>
+    </header>
+
+    <!-- About Section Content -->
+
+
+
+    <section class="about-section">
+        <div class="profile-image">
+            <img src="img/chayo.png" alt="Rosario Orozco">
+        </div>
+        <div class="about-text">
+
+
+            <h2>Hi, I'm Rosario.</h2>
+            <p>
+                I’m a <strong>full stack developer</strong> and <strong>data analyst</strong> who loves bringing technology and data together to create solutions that are as impactful as they are efficient. I’m passionate about clean, functional code and uncovering insights that help drive smarter decisions.
+            </p>
+            
+            <h3>Background & Skills</h3>
+            <p>
+                Throughout my career, I've worked on projects ranging from <strong>front-end and back-end development</strong> to <strong>data analytics</strong> and <strong>automation</strong>. This experience has shaped my approach: I believe in building applications that are user-friendly, reliable, and grounded in data. I approach each project with an eye for detail, balancing functionality with an intuitive user experience.
+            </p>
+            
+            <h3>Personal Interests</h3>
+            <p>
+                Outside of work, I’m usually exploring a new recipe, diving into a good book, or experimenting with coding projects. These hobbies keep me inspired and curious, and they bring fresh perspectives to my work—a balance of creativity, focus, and a love for learning.
+            </p>
+        </div>
+        
+
+    </section>
+    
+    <section class="skills-section">
+        <h3>Skills & Technologies</h3>
+        <div class="skills-container">
+            
+            <div class="skill-block">
+                <strong>Languages</strong>
+                <div class="skill-logos">
+                    <!-- Logos from Simple Icons CDN -->
+                    <img src="https://cdn.simpleicons.org/javascript/ffb13b" alt="JavaScript Logo" title="JavaScript">
+                    <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python Logo" title="Python">
+                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML Logo" title="HTML">
+                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS Logo" title="CSS">
+                </div>
+            </div>
+            
+            <div class="skill-block">
+                <strong>Frameworks & Libraries</strong>
+                <div class="skill-logos">
+                    <!-- Logos from Devicon CDN -->
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" title="Django">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap" title="Bootstrap">
+                </div>
+            </div>
+            
+            <div class="skill-block">
+                <strong>Tools & Platforms</strong>
+                <div class="skill-logos">
+                    <!-- Additional Logos from Simple Icons and Devicon -->
+                    <img src="https://cdn.simpleicons.org/git/F05032" alt="Git Logo" title="Git">
+                    <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub Logo" title="GitHub">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" title="Azure">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    
+    
+
+    <!-- JavaScript for Menu Toggle -->
+    <script>
+    
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('show-menu');
+    }
+    </script>
+<!-- Custom Cursor Element -->
+<div class="custom-cursor"></div>
+
+<!-- Link to the custom cursor JavaScript -->
+<script src="js/cursor.js"></script>
+<script src="js/transitions.js"></script>
+
+
+</body>
+</html>
