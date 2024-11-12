@@ -309,4 +309,15 @@ body.fade-out {
     align-items: start; /* This aligns the items at the top */
 }
 
+@media (max-width: 768px) {
+    .custom-cursor {
+        display: none;
+    }
+
+    /* Opcional: Restaura el cursor predeterminado en los elementos */
+    body {
+        cursor: auto;
+    }
+}
+
 
