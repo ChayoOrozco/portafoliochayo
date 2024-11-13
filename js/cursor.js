@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
         cursor.style.left = `${e.clientX}px`;
     });
 
-    // Add the line effect when hovering over menu links
-    document.querySelectorAll('nav a').forEach(link => {
+    // Add the line effect when hovering over all links on the page
+    document.querySelectorAll('a').forEach(link => {
         link.addEventListener('mouseenter', () => {
             cursor.classList.add('menu-hover');
         });
