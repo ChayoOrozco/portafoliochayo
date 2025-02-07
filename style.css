@@ -535,4 +535,81 @@ body.fade-out {
 
 }
 
+/* Contenedor de la cuadrícula */
+.projects-section {
+    display: flex;
+    justify-content: center; /* Centra el contenedor de las cards */
+    align-items: center;
+    width: 100%;
+  }
   
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta las columnas */
+    gap: 1rem;
+    max-width: 1000px; /* Ajusta el ancho máximo */
+    margin: 0 auto; /* Centra el grid */
+    padding: 20px;
+    justify-content: center; /* Asegura que las cards no se peguen a la izquierda */
+  }
+  
+  
+  /* Estilos base de las cards */
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
+    width: 100%;
+    max-width: 250px; /* Tamaño inicial más compacto */
+    height: 200px; /* Altura inicial */
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  /* Efecto hover para mejor interacción */
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Expansión de la card */
+  .card.expanded {
+    height: 300px; /* Crece solo un poco para mostrar más contenido */
+    transition: height 0.3s ease-in-out;
+  }
+  
+  /* Ocultar contenido extra inicialmente */
+  .card .extra-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  /* Mostrar contenido extra cuando la card esté expandida */
+  .card.expanded .extra-content {
+    max-height: 150px;
+    opacity: 1;
+  }
+
+.card .extra-content {
+    display: none;
+}
+
+.card.expandable:hover .extra-content {
+    display: block;
+}
+
+.carousel-item img {
+    max-height: 300px; /* Ajusta la altura máxima de las imágenes del carrusel */
+    object-fit: cover;
+}
