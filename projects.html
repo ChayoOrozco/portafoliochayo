@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Rosario Orozco</title>
+    <title>Projects | Rosario Orozco</title>
     
     <!-- Link to your main CSS for shared styles -->
     <link rel="icon" type="image/png" href="./img/icon.png">
@@ -16,7 +16,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link 
     rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" 
+/>
+
+
     
 </head>
 <body data-page="about" class="about-page">
@@ -34,7 +37,7 @@
         <!-- Dropdown Links (initially hidden) -->
         <nav id="menu" class="dropdown-links">
             <a href="./index.html">Home</a>
-            <a href="./projects.html">Projects</a>
+            <a href="./about.html">About</a>
             <a href="#projects">Baking with Chayo</a>
             <a href="#contact">Let's work together</a>
         </nav>
@@ -42,103 +45,98 @@
         <!-- Desktop Menu for larger screens only -->
         <nav class="desktop-nav">
             <a href="./index.html">Home</a>
-            <a href="./projects.html">Projects</a>
+            <a href="./about.html">About</a>
             <a href="#projects">Baking with Chayo</a>
             <a href="#contact">Let's work together</a>
         </nav>
     </header>
 
-    <!-- About Section Content -->
+  <!-- Projects Grid Section -->
+  <section class="projects-section">
 
-
-
-    <section class="about-section">
-        <div class="profile-image">
-            <img src="img/chayo.png" alt="Rosario Orozco">
-        </div>
-        <div class="about-text">
-
-
-            <h2>Hi, I'm Rosario.</h2>
-            <p>
-                I’m a <strong>full stack developer</strong> and <strong>data analyst</strong> who loves bringing technology and data together to create solutions that are as impactful as they are efficient. I’m passionate about clean, functional code and uncovering insights that help drive smarter decisions.
-            </p>
-            
-            <h3>Background & Skills</h3>
-            <p>
-                Throughout my career, I've worked on projects ranging from <strong>front-end and back-end development</strong> to <strong>data analytics</strong> and <strong>automation</strong>. This experience has shaped my approach: I believe in building applications that are user-friendly, reliable, and grounded in data. I approach each project with an eye for detail, balancing functionality with an intuitive user experience.
-            </p>
-            
-            <h3>Personal Interests</h3>
-            <p>
-                Outside of work, I’m usually exploring a new recipe, diving into a good book, or experimenting with coding projects. These hobbies keep me inspired and curious, and they bring fresh perspectives to my work—a balance of creativity, focus, and a love for learning.
-            </p>
-        </div>
-        
-
-    </section>
-    
-    <section class="skills-section">
-        <h3>Skills & Technologies</h3>
-        <div class="skills-container">
-            
-            <div class="skill-block">
-                <strong>Languages</strong>
-                <div class="skill-logos">
-                    <!-- Logos from Simple Icons CDN -->
-                    <img src="https://cdn.simpleicons.org/javascript/ffb13b" alt="JavaScript Logo" title="JavaScript">
-                    <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python Logo" title="Python">
-                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML Logo" title="HTML">
-                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS Logo" title="CSS">
+    <div class="card expandable" style="background-color: #f0f4ff;">
+        <h3>Teaching Materials</h3>
+        <p>Interactive lesson plans and engaging educational resources.</p>
+        <div class="extra-content">
+            <p>Here you can add more detailed information about this project...</p>
+            <p>Check out my profiles:</p>
+            <ul>
+                <li><a href="https://www.teacherspayteachers.com/Store/YourProfile" target="_blank">Teachers Pay Teachers</a></li>
+                <li><a href="https://www.canva.com/YourProfile" target="_blank">Canva</a></li>
+            </ul>
+            <!-- Bootstrap Carousel -->
+            <div id="teachingMaterialsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/img/paula.png.png" class="d-block w-100" alt="Example 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="path/to/your/image2.jpg" class="d-block w-100" alt="Example 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="path/to/your/image3.jpg" class="d-block w-100" alt="Example 3">
+                    </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#teachingMaterialsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#teachingMaterialsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            
-            <div class="skill-block">
-                <strong>Frameworks & Libraries</strong>
-                <div class="skill-logos">
-                    <!-- Logos from Devicon CDN -->
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" title="Django">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap" title="Bootstrap">
-                </div>
-            </div>
-            
-            <div class="skill-block">
-                <strong>Tools & Platforms</strong>
-                <div class="skill-logos">
-                    <!-- Additional Logos from Simple Icons and Devicon -->
-                    <img src="https://cdn.simpleicons.org/git/F05032" alt="Git Logo" title="Git">
-                    <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub Logo" title="GitHub">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" title="Azure">
-                </div>
-            </div>
-            
         </div>
-    </section>
-    
-    
-    
+    </div>
+      
 
-    <!-- JavaScript for Menu Toggle -->
-    <script>
-    
-    function toggleMenu() {
-        const menu = document.getElementById('menu');
-        menu.classList.toggle('show-menu');
-    }
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    </script>
-<!-- Custom Cursor Element -->
-<div class="custom-cursor"></div>
+    <div class="card expandable" style="background-color: #f4fff4;">
+        <h3>Web Projects</h3>
+        <p>Responsive websites and functional web applications.</p>
+        <div class="extra-content">
+            <p>Here you can add more detailed information about this project...</p>
+        </div>
+    </div>
 
-<!-- Link to the custom cursor JavaScript -->
-<script src="js/cursor.js"></script>
-<script src="js/transitions.js"></script>
+    <div class="card expandable" style="background-color: #fffef4;">
+        <h3>Course Videos</h3>
+        <p>Step-by-step tutorials and programming lessons.</p>
+        <div class="extra-content">
+            <p>Here you can add more detailed information about this project...</p>
+        </div>
+    </div>
+
+    <div class="card expandable" style="background-color: #fff4f4;">
+        <h3>Design Portfolio</h3>
+        <p>Creative designs, including logos, posters, and UI mockups.</p>
+        <div class="extra-content">
+            <p>Here you can add more detailed information about this project...</p>
+        </div>
+      </div>
+
+  </section>
+
+  <!-- JavaScript for Menu Toggle -->
+  <script>
+  function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('show-menu');
+  }
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  </script>
+
+  <!-- Custom Cursor Element -->
+  <div class="custom-cursor"></div>
+
+  <!-- Link to the custom cursor JavaScript -->
+  <script src="js/cursor.js"></script>
+  <script src="js/transitions.js"></script>
+  <script src="js/cards.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 
   <!-- Footer Section -->
-  <footer class="bg-dark text-white">
+<footer class="bg-dark text-white">
     <div class="container">
         <nav class="row">
         <!-- logo   -->
@@ -189,8 +187,8 @@
             </symbol>
         
             <!-- GitHub -->
-            <symbol id="github" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12,2.2467A10.00042,10.00042,0,0,0,8.83752,21.73419c.5.08752.6875-.21247.6875-.475,0-.23749-.01251-1.025-.01251-1.86249C7,19.85919,6.35,18.78423,6.15,18.22173A3.636,3.636,0,0,0,5.125,16.8092c-.35-.1875-.85-.65-.01251-.66248A2.00117,2.00117,0,0,1,6.65,17.17169a2.13742,2.13742,0,0,0,2.91248.825A2.10376,2.10376,0,0,1,10.2,16.65923c-2.225-.25-4.55-1.11254-4.55-4.9375a3.89187,3.89187,0,0,1,1.025-2.6875,3.59373,3.59373,0,0,1,.1-2.65s.83747-.26251,2.75,1.025a9.42747,9.42747,0,0,1,5,0c1.91248-1.3,2.75-1.025,2.75-1.025a3.59323,3.59323,0,0,1,.1,2.65,3.869,3.869,0,0,1,1.025,2.6875c0,3.83747-2.33752,4.6875-4.5625,4.9375a2.36814,2.36814,0,0,1,.675,1.85c0,1.33752-.01251,2.41248-.01251,2.75,0,.26251.1875.575.6875.475A10.0053,10.0053,0,0,0,12,2.2467Z"></path>
+            <symbol id="github" viewBox="0  0 24 24" fill="currentColor">
+                <path d="M12,2.2467A10,10,0,1,0,8.83752,21.73419c.5.08752.6875-.21247.6875-.475,0-.23749-.01251-1.025-.01251-1.86249C7,19.85919,6.35,18.78423,6.15,18.22173A3.636,3.636,0,0,0,5.125,16.8092c-.35-.1875-.85-.65-.01251-.66248A2.00117,2.00117,0,0,1,6.65,17.17169a2.13742,2.13742,0,0,0,2.91248.825A2.10376,2.10376,0,0,1,10.2,16.65923c-2.225-.25-4.55-1.11254-4.55-4.9375a3.89187,3.89187,0,0,1,1.025-2.6875,3.59373,3.59373,0,0,1,.1-2.65s.83747-.26251,2.75,1.025a9.42747,9.42747,0,0,1,5,0c1.91248-1.3,2.75-1.025,2.75-1.025a3.59323,3.59323,0,0,1,.1,2.65,3.869,3.869,0,0,1,1.025,2.6875c0,3.83747-2.33752,4.6875-4.5625,4.9375a2.36814,2.36814,0,0,1,.675,1.85c0,1.33752-.01251,2.41248-.01251,2.75,0,.26251.1875.575.6875.475A10.0053,10.0053,0,0,0,12,2.2467Z"></path>
             </symbol>
         
             <!-- Telegram -->
@@ -205,9 +203,5 @@
 
 </footer>
 
-
-
-
-  
 </body>
 </html>
